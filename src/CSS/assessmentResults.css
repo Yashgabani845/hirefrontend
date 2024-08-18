@@ -1,0 +1,72 @@
+.assessment-results-container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f0f4f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.results-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.result-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.result-details h3 {
+    margin: 0 0 10px 0;
+    font-family: 'Arial', sans-serif;
+    color: #4e9ff5;
+}
+
+.result-details p {
+    margin: 5px 0;
+    font-family: 'Arial', sans-serif;
+    color: #555;
+}
+
+.view-result-btn {
+    background-color: #4e9ff5;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.view-result-btn:hover {
+    background-color: #3e8fd1;
+}
+
+.no-results {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #888;
+    font-size: 18px;
+}

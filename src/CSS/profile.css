@@ -1,0 +1,128 @@
+.profile-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 12px;
+font-family:sans-serif;}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+}
+
+.profile-name {
+    font-size: 28px;
+    font-weight: 700;
+    color: #343a40;
+    margin-bottom: 5px;
+}
+
+.profile-email {
+    font-size: 18px;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+.logout-button,
+.manage-jobs-button {
+    padding: 9px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-right: 10px; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logout-button:hover,
+.manage-jobs-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.manage-jobs-button {
+    background-color: #ffffff;
+    color: #007bff;
+    border: 2px solid #007bff;
+    margin-right: 0; 
+}
+
+.manage-jobs-button:hover {
+    background-color: #e7f1ff;
+    color: #0056b3;
+    border-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-details {
+    margin-top: 20px;
+}
+
+.profile-section {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border-left: 5px solid #007bff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.section-icon {
+    margin-right: 10px;
+    font-size: 24px;
+    color: #007bff;
+}
+
+
+
+
+.skills-list,
+.languages-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list .skill-item,
+.languages-list .language-item {
+  background-color: #e9ecef;
+  border-radius: 20px;
+  padding: 8px 12px;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 8px;
+}
+
+.resume-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.resume-link:hover {
+    text-decoration: underline;
+}

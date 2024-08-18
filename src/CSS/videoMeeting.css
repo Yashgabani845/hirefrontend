@@ -1,0 +1,64 @@
+.video-meeting-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.name-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-container {
+    margin: 20px;
+}
+
+.controls {
+    display: flex;
+    margin-top: 10px;
+}
+
+.control-btn {
+    margin: 0 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.control-btn.on {
+    background-color: green;
+    color: white;
+}
+
+.control-btn.off {
+    background-color: red;
+    color: white;
+}
+
+.start-call {
+    background-color: green;
+    color: white;
+}
+
+.end-call {
+    background-color: red;
+    color: white;
+}
+
+.user-list {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.user-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.user-list li {
+    margin: 5px 0;
+}

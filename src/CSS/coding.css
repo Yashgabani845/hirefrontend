@@ -1,0 +1,160 @@
+.coding-interface {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.codingarea{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.code-desc {
+    width: 50%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-right: 1px solid #e0e0e0;
+}
+
+.code-desc h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.code-desc p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.code-desc ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #555;
+}
+
+.code-desc ul li {
+    margin-bottom: 5px;
+}
+.testcase-passed {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.testcase-failed {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.code-editor {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.editor-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.editor-header label {
+    font-size: 16px;
+    color: #333;
+}
+
+.editor-header select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    margin-left: 10px;
+}
+
+.ace-editor {
+    height: 400px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+
+
+
+.testcases {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    height: 200px;
+    overflow-y: auto;
+    margin: 20px 0;
+}
+
+.testcases h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.testcases pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: #555;
+}
+
+
+.editor-action{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.run,
+.submit {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, filter 0.3s ease; /* Added filter transition */
+  margin-right: 10px; /* Adjust margin as needed */
+}
+
+.run {
+  background-color: #f0f0f0; /* Light gray background for Run button */
+  color: #333; /* Dark gray text */
+  filter: blur(1px); /* Blur effect */
+}
+
+.submit {
+  background-color: #4caf50; /* Green background for Submit button */
+  color: white; /* White text */
+}
+
+.run:hover {
+  filter: none; /* Remove blur on hover */
+  background-color: #e0e0e0; /* Lighter gray background on hover */
+}
+
+.submit:hover {
+  background-color: #45a049; /* Darker green background on hover */
+}
