@@ -1,8 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
-import React, { useState } from 'react';
+import React from 'react';
 import Homepage from './Components/Homepage';
-import HeroSection from './Components/HeroSection';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Signup from './Components/Signup';
 import Jobpage from './Components/Jobpage';
@@ -10,14 +8,12 @@ import Job from './Components/Job';
 import Dashboard from './Components/Dashboard';
 import AdminDashboard from './Components/AdminDashboard';
 import JobPostForm from './Components/JobPostForm';
-import VideoMeeting from './Components/VideoMeeting';
 import CompanyRegistration from './Components/CompanyRegistration';
 import Profile from './Components/Profile';
 import SignIn from './Components/Signin';
 import UploadedJobs from './Components/UploadedJobs';
 import Coding from './Components/Coding';
 import CreateAssessment from './Components/CreateTest';
-import Video from './Components/Video';
 import ManageJobs from './Components/Managejob';
 import ApplicationForm from './Components/ApplicationForm';
 import Shortlist from './Components/Shortlist';
@@ -25,7 +21,6 @@ import Employer from './Components/Employer';
 import AssessmentResults from './Components/AssesmentResult';
 import AssessmentResultDetail from './Components/AssessmentResultDetails';
 function App() {
-  const [test, setTest] = useState(null);
 
   return (
     <Router>
@@ -38,14 +33,12 @@ function App() {
         <Route path="/ownerside" element={<Dashboard/>}/>
         <Route path="/admin" element={<AdminDashboard/>}/>
         <Route path="/postjob" element ={<JobPostForm/>}/>
-        <Route path="/video" element={<VideoMeeting/>}/>
         <Route path="/company" element={<CompanyRegistration/>}/>  
         <Route path="/profile" element={<Profile/>}/>    
         <Route path="/signin" element={<SignIn/>}/> 
         <Route path='/uploadedjobs' element={<UploadedJobs/>}/>
         <Route path='/code/:assessmentId' element={<Coding />} />
         <Route path='/manage-assesment/:jobId' element={<CreateAssessment />} />
-        <Route path='/videocalling' element={<Video/>}/>
         <Route path="/managejobs/:jobId" element={<ManageJobs />} />
         <Route path="/application" element={<ApplicationForm/>}/>
         <Route path='/shortlist/:jobId' element={<Shortlist/>}/>
