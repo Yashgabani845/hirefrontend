@@ -10,10 +10,8 @@ const Jobgrid = ({ filters }) => {
     useEffect(() => {
         const fetchJobs = async () => {
             try {
-                // Fetch all jobs
                 const jobResponse = await axios.get('https://hirebackend-1.onrender.com/api/job');
                 
-                // Fetch company logos for each job
                 const jobsWithLogos = await Promise.all(
                     jobResponse.data.map(async (job) => {
                         const companyResponse = await axios.get(`https://hirebackend-1.onrender.com/api/companies/${job.postedBy}`);

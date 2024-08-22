@@ -20,6 +20,7 @@ import Shortlist from './Components/Shortlist';
 import Employer from './Components/Employer';
 import AssessmentResults from './Components/AssesmentResult';
 import AssessmentResultDetail from './Components/AssessmentResultDetails';
+import About from './Components/About';
 function App() {
 
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/company" element={<CompanyRegistration/>}/>  
         <Route path="/profile" element={<Profile/>}/>    
         <Route path="/signin" element={<SignIn/>}/> 
+        <Route path= "/about" element={<About/>}/>
         <Route path='/uploadedjobs' element={<UploadedJobs/>}/>
         <Route path='/code/:assessmentId' element={<Coding />} />
         <Route path='/manage-assesment/:jobId' element={<CreateAssessment />} />

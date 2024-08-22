@@ -1,0 +1,25 @@
+.divs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.step1{
+    height: 300px;
+  
+}
+.step2{
+    height: 300px;
+
+}
+.step3{
+    height: 300px;
+    
+}
+.step4{
+    height: 300px;
+   
+}
+.step5{
+    height: 300px;
+   
+}
