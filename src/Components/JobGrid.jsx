@@ -6,6 +6,7 @@ import "../CSS/jobgrid.css";
 const Jobgrid = ({ filters }) => {
     const [jobsWithLogos, setJobs] = useState([]);
     const [filteredJobs, setFilteredJobs] = useState([]);
+    const [loading, setLoading] = useState(true); // State to manage loading
 
     useEffect(() => {
         const fetchJobs = async () => {
@@ -25,6 +26,8 @@ const Jobgrid = ({ filters }) => {
                 setJobs(jobsWithLogos);
             } catch (error) {
                 console.error("Error fetching jobs:", error);
+            } finally {
+                setLoading(false); // Set loading to false after fetching
             }
         };
 
@@ -71,17 +74,25 @@ const Jobgrid = ({ filters }) => {
 
     return (
         <div className="jobgrid">
-            {filteredJobs.map((job) => (
-                <Jobcard
-                    comlogo={job.comlogo || job.logo}
-                    id={job._id}
-                    key={job._id}
-                    company={job.postedBy}
-                    worklocation={job.workLocation}
-                    department={job.department}
-                    role={job.role}
-                />
-            ))}
+            {loading ? (
+                <div className="loader">
+                    <div className="dot"></div>
+                    <div className="dot"></div>
+                    <div className="dot"></div>
+                </div>
+            ) : (
+                filteredJobs.map((job) => (
+                    <Jobcard
+                        comlogo={job.comlogo || job.logo}
+                        id={job._id}
+                        key={job._id}
+                        company={job.postedBy}
+                        worklocation={job.workLocation}
+                        department={job.department}
+                        role={job.role}
+                    />
+                ))
+            )}
         </div>
     );
 };

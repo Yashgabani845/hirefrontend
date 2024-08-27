@@ -15,7 +15,7 @@ const About = () => {
       <div className="about-container">
         <div className="feature-section">
           <h1>Welcome to Hiring Hub</h1>
-          <p>Your comprehensive platform for job searching and recruitment.</p>
+          <p>Our comprehensive platform for job searching and recruitment.</p>
         </div>
 
         <div className="features">

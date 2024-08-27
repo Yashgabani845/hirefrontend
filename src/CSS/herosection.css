@@ -43,13 +43,13 @@
   display: flex;
   align-items: center;
   position: relative;
-  margin: 5px 10px; 
+  margin: 5px 10px;
 }
 
 .search {
   height: 40px;
   border-radius: 16px;
-  padding-left: 40px; 
+  padding-left: 40px;
   border: none;
   font-size: 17px;
   outline: none;
@@ -61,7 +61,7 @@
 .search-icon,
 .location-icon {
   position: absolute;
-  left: 10px; 
+  left: 10px;
   color: #000000;
 }
 
@@ -127,13 +127,22 @@
     font-size: 28px;
   }
 
+  .hero-content p {
+    font-size: 15px;
+  }
+
   .search-bar {
     flex-direction: column;
     padding: 15px;
   }
 
+  .searchdiv {
+    margin: 5px 0;
+  }
+
   .searchbtn {
     margin-top: 15px;
+    width: 100%;
   }
   
   .search-results {
@@ -163,6 +172,7 @@
   .searchbtn {
     padding: 8px 16px;
     font-size: 14px;
+    width: 100%;
   }
 
   .job-item h3 {

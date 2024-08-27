@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import axios from 'axios';  
 import LazyLoad from 'react-lazyload';
 
@@ -40,6 +40,11 @@ const Navbar = () => {
     } 
   }
 
+  const handleClick = (path) => {
+    setActiveTab(path);
+    navigate(path);
+  };
+
   return (
     <div className="navbar">
       <div className="logo">
@@ -48,34 +53,46 @@ const Navbar = () => {
         </LazyLoad>
       </div>
       <div className="icons">
-        <div className={`icon home ${activeTab === '/' ? 'active' : ''}`}>
+        <div 
+          className={`icon home ${activeTab === '/' ? 'active' : ''}`} 
+          onClick={() => handleClick('/')}
+        >
           <HomeIcon />
-          <Link to="/" onClick={() => setActiveTab('/')}><span>Home</span></Link>
+          <span>Home</span>
         </div>
-        <div className={`icon jobs ${activeTab === '/jobcard' ? 'active' : ''}`}>
+        <div 
+          className={`icon jobs ${activeTab === '/jobcard' ? 'active' : ''}`} 
+          onClick={() => handleClick('/jobcard')}
+        >
           <WorkIcon />
-          <Link to="/jobcard" onClick={() => setActiveTab('/jobcard')}><span>Jobs</span></Link>
+          <span>Jobs</span>
         </div>
-        <div className={`icon aboutus ${activeTab === '/about' ? 'active' : ''}`}>
+        <div 
+          className={`icon aboutus ${activeTab === '/about' ? 'active' : ''}`} 
+          onClick={() => handleClick('/about')}
+        >
           <InfoIcon />
-          <Link to="/about" onClick={() => setActiveTab('/about')}><span>About</span></Link>
+          <span>About</span>
         </div>
-        <div className={`icon login ${activeTab === '/profile' ? 'active' : ''}`}>
+        <div 
+          className={`icon login ${activeTab === (isLoggedIn ? '/profile' : '/signin') ? 'active' : ''}`} 
+          onClick={() => handleClick(isLoggedIn ? '/profile' : '/signin')}
+        >
           {isLoggedIn ? (
             <>
               <AccountCircleIcon />
-              <Link to="/profile" onClick={() => setActiveTab('/profile')}><span>Profile</span></Link>
+              <span>Profile</span>
             </>
           ) : (
             <>
               <LoginIcon />
-              <Link to="/signin" onClick={() => setActiveTab('/signin')}><span>Login</span></Link>
+              <span>Login</span>
             </>
           )}
         </div>
       </div>
-      <div className="posting">
-        <span onClick={handlePostJob}>Employer/Post Job</span>
+      <div className="posting" onClick={handlePostJob}>
+        <span>Employer/Post Job</span>
         <LaunchIcon className="posting-icon" />
       </div>
     </div>

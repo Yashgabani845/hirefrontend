@@ -4,3 +4,46 @@
     gap: 20px;
     padding: 20px;
 }
+
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; 
+}
+
+.loader .dot {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: #3498db;
+    border-radius: 50%;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+.loader .dot:nth-child(1) {
+    animation-delay: 0s;
+}
+.loader .dot:nth-child(2) {
+    animation-delay: 0.3s;
+}
+.loader .dot:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1);
+    }
+}
+
+.jobgrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px; 
+}
